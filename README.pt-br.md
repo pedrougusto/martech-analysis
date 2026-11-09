@@ -72,6 +72,18 @@ A tabela de classificação gerada pelo `01` também é a base do projeto comple
 
 ---
 
+## Prévia dos Dashboards
+
+> Gráficos gerados com **dados sintéticos** para ilustrar as saídas de cada query — não representam números reais da empresa.
+
+| Mix de status do ciclo de vida (`01`) | Data-driven x último agendamento (`02`) |
+|---|---|
+| ![Status do ciclo de vida](docs/images/dash_01_lifecycle_status.png) | ![Comparação de atribuição](docs/images/dash_02_attribution_comparison.png) |
+| **Receita atribuída x incremental (`04`–`06`)** | **Funil site da marca → app → receita (`07`)** |
+| ![Canibalização e LIFT](docs/images/dash_03_cannibalization_lift.png) | ![Funil](docs/images/dash_04_funnel.png) |
+
+---
+
 ## Destaques Técnicos
 
 - **Backfill em SQL procedural:** um único script reconstrói todo o histórico mensal, deixando a classificação auditável e reprodutível.
@@ -107,6 +119,8 @@ martech-analysis/
 │   ├── 07_funnel_brand_site_to_app.sql
 │   ├── 08_funnel_app_onboarding_to_revenue.sql
 │   └── 09_paid_search_post_login_analysis.sql
+├── docs/
+│   └── images/            # prévias dos dashboards (dados sintéticos)
 ├── LICENSE
 ├── README.md
 └── README.pt-br.md

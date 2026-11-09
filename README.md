@@ -72,6 +72,18 @@ The classification table produced by `01` is also the base of the companion proj
 
 ---
 
+## Dashboard Preview
+
+> Charts generated with **synthetic data** to illustrate the outputs of each query — they do not represent real company figures.
+
+| Lifecycle status mix (`01`) | Data-driven vs last booking (`02`) |
+|---|---|
+| ![Lifecycle status](docs/images/dash_01_lifecycle_status.png) | ![Attribution comparison](docs/images/dash_02_attribution_comparison.png) |
+| **Attributed vs incremental revenue (`04`–`06`)** | **Brand site → app → revenue funnel (`07`)** |
+| ![Cannibalization and LIFT](docs/images/dash_03_cannibalization_lift.png) | ![Funnel](docs/images/dash_04_funnel.png) |
+
+---
+
 ## Key Technical Highlights
 
 - **Procedural SQL backfill:** one script rebuilds the full monthly history, so the classification is auditable and reproducible.
@@ -107,6 +119,8 @@ martech-analysis/
 │   ├── 07_funnel_brand_site_to_app.sql
 │   ├── 08_funnel_app_onboarding_to_revenue.sql
 │   └── 09_paid_search_post_login_analysis.sql
+├── docs/
+│   └── images/            # dashboard previews (synthetic data)
 ├── LICENSE
 ├── README.md
 └── README.pt-br.md
